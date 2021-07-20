@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "attendance": {
+      "type": "string"
+    },
+    "event": {
+      "model": "events",
+      "via": "reviews"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reviews"
+    },
+    "name": {
+      "type": "string",
+      "unique": false
+    }
+  }
+}

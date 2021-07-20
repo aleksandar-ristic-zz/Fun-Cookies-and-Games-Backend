@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "events",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "performers": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "time": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "events"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "reviews": {
+      "via": "event",
+      "collection": "review"
+    }
+  }
+}
