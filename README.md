@@ -5,7 +5,7 @@ This is database for NextJs project.
 It is made with [Strapi](https://strapi.io/) an amazing open-source CMS
 
 Data is written in MySQL, which changed in production to PostgreSQL,
-because although MySQL is easeier to write and faster, PostgreSQL is
+because although MySQL is easier to write and faster, PostgreSQL is
 more powerful, object-relational and specifically designed for large databases.
 
 ## Deployment
